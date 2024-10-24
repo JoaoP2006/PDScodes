@@ -113,12 +113,11 @@ public class PizzariaCard extends JFrame {
 		double total = 0.0;
 		int saboresSelecionados = 0;
 
-		// Verifica borda
 		if (rdbtnBorda.isSelected()) {
 			total += 5.00;
 		}
 
-		// Verifica os sabores (máximo 3)
+		
 		for (int i = 0; i < checkboxes.length - 3; i++) {
 			if (checkboxes[i].isSelected()) {
 				saboresSelecionados++;
@@ -143,7 +142,7 @@ public class PizzariaCard extends JFrame {
 			}
 		}
 
-		// Verifica opcionais
+		
 		for (int i = checkboxes.length - 3; i < checkboxes.length; i++) {
 			if (checkboxes[i].isSelected()) {
 				switch (i) {
@@ -160,7 +159,7 @@ public class PizzariaCard extends JFrame {
 			}
 		}
 
-		// Verifica o tipo de entrega
+		
 		String entregaSelecionada = (String) comboBox.getSelectedItem();
 		if (entregaSelecionada != null && entregaSelecionada.contains("Entrega")) {
 			total += 7.00;
